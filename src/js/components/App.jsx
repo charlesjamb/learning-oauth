@@ -1,14 +1,22 @@
-var React = require('react');
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
-var App = React.createClass({
-  render: function() {
+class App extends Component {
+  render() {
     return (
-      <main>
-        <h1>Learning Oauth2</h1>
-        <hr/>
-      </main>
+    	<div>
+    		<header>
+    			<Link to="/">
+    				<h1>Learning Oauth</h1>
+    			</Link>
+    			<hr/>
+    		</header>
+    		<main>
+    			{this.props.children}
+    		</main>
+    	</div>
     );
   }
-});
+};
 
-module.exports = App;
+export default App;
