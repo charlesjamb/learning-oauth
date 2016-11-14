@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+import Login from './Login'
+
 class App extends Component {
   render() {
     return (
@@ -11,6 +13,9 @@ class App extends Component {
     			</Link>
     			<hr/>
     		</header>
+            <section>
+                <Login/>
+            </section>
     		<main>
     			{this.props.children}
     		</main>
